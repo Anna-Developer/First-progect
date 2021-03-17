@@ -95,16 +95,14 @@ a {
 }
 
 .header-content__left {
-    display: flex;
-    flex-basis: 800px;
+    display: flex;    
     justify-content: space-evenly;
     align-items: center;
     margin-left: 117px;
 }
 
 .header-content__right {
-    display: flex;
-    flex-basis: 300px;
+    display: flex;    
     align-items: center;
     margin-right: 117px;
 }
