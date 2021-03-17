@@ -85,26 +85,20 @@ a {
 
 /* дочирний селектор */
 
-.header-content {
+.header {
     min-height: 80px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+}
+
+.header-content {
     border-bottom: 1px solid #D8E3FE;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.header-content__left {
-    display: flex;    
-    justify-content: space-evenly;
+.header-content, .header-content__left, .header-content__right {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 117px;
-}
-
-.header-content__right {
-    display: flex;    
-    align-items: center;
-    margin-right: 117px;
 }
 
 .logo {
@@ -163,7 +157,7 @@ a {
 }
 
 .social-media>a {
-    padding: 10px;
+    margin-right: 20px;
 }
 
 .header-content__botton {
@@ -937,4 +931,32 @@ input[type='email']::placeholder {
         width: 150px;
         height: 50px;
     }
+}
+
+@media screen and (max-width: 1020px) {
+    .menu>li {
+        padding: 15px 0px;
+    }
+    .social-media>a {
+        margin-right: 7px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .menu>li {
+        display: block;
+    }
+    .menu>li:hover>ul {
+        display: none;
+    }
+    nav {
+        order: -1;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    
 }
