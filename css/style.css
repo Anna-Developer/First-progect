@@ -880,6 +880,9 @@ h2.big.text {
         grid-template-rows: repeat(4, auto);
         grid-template-columns: repeat(4, 1fr);
     }
+    .grid-container{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -891,15 +894,14 @@ h2.big.text {
         width: 95%;
     }
     .form-pall__data>p textarea {
-        width: 95%;
+        width: 90%;
     }
-    .capcha__check:invalid+.capcha__span::after {
-        margin-top: 26px;
-        margin-left: -205px;
+    .form-pall__btn {
+        text-align: center;
+        margin-top: 50px;
     }
     .send-button {
-        margin-left: 15px;
-        padding: 5px 10px;
+        margin: 20px;
     }
     .features-wrap {
         height: 1200px;
@@ -946,6 +948,16 @@ h2.big.text {
         margin: 0 30px;
     }
 }
+
+/* @media screen and (max-width: 440px) {
+    .capcha__check:invalid+.capcha__span::after {
+        top: 25px;
+        left: -150px;
+    }
+    .capcha__false {
+        margin-left: -250px;
+    }
+} */
 
 @media screen and (max-width: 320px) {
     .flexbox {
