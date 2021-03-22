@@ -880,7 +880,7 @@ h2.big.text {
         grid-template-rows: repeat(4, auto);
         grid-template-columns: repeat(4, 1fr);
     }
-    .grid-container{
+    .grid-container {
         width: 90%;
     }
 }
