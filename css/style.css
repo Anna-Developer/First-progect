@@ -436,9 +436,12 @@ h2.big.text {
     margin: 50px auto;
 }
 
+
+
 .card img {
     width: 120px;
     height: 80px;
+    margin: 0 auto;
 }
 
 .carousel-control-prev-icon {
@@ -857,6 +860,7 @@ h2.big.text {
     .social-media>a {
         margin-right: 7px;
     }
+    .visual-section-1, .visual-section-2 {}
 }
 
 @media screen and (max-width: 950px) {
@@ -940,9 +944,9 @@ h2.big.text {
         width: 50%;
         margin: 0 auto;
     }
-    .features__span {
+    /* .features__span {
         margin: 0 30px;
-    }
+    } */
 }
 
 @media screen and (max-width: 500px) {
@@ -1032,9 +1036,9 @@ h2.big.text {
         width: 50%;
         margin: 0 auto;
     }
-    .features__span {
+    /* .features__span {
         margin: 0 30px;
-    }
+    } */
     .get-started {
         width: 100%;
     }
