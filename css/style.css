@@ -658,6 +658,7 @@ h2.big.text {
     grid-template-rows: auto;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 67px;
+    z-index: 1000000000000;
 }
 
 .features__content>div>h5 a {
