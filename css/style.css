@@ -197,12 +197,15 @@ nav {
 /* flex-start */
 
 .blog {
+    margin-top: -50px;
     display: flex;
     flex-flow: row nowrap;
+    background-color: whitesmoke;
 }
 
 aside, article {
     flex-basis: 300px;
+    margin-top: 50px;
 }
 
 aside {
@@ -284,28 +287,32 @@ label+img+img+img {
 
 /* селекторы атрибутов */
 
+[href='#switch'] {
+    color: #5e86fd;
+}
+
 q[title] {
-    color: red;
+    color: #5e86fd;
 }
 
 q[title='цитата3'] {
-    color: blue;
+    color: #5e86fd;
 }
 
 a[href ^='https'] {
-    color: red;
+    color: #5e86fd;
 }
 
 a[href $='.com'] {
-    color: yellow;
+    color: #5e86fd;
 }
 
 a[href *='mozila'] {
-    color: brown;
+    color: #5e86fd;
 }
 
 [class~='big'] {
-    background: cadetblue;
+    background: #c5d1fc;
 }
 
 p[class |='text'] {
@@ -315,11 +322,12 @@ p[class |='text'] {
 /* комбинирование селектора */
 
 h2.big.text {
-    color: darkblue;
+    color: #5e86fd;
 }
 
 .text {
-    color: red !important;
+    color: #5e86fd !important;
+    padding-left: 15px;
 }
 
 #big {
@@ -348,7 +356,7 @@ h2.big.text {
 }
 
 .flex-3 {
-    background: chartreuse;
+    background: #c5d1fc;
     padding: 50px 10px 5px;
     background-image: url(../images/skills/images/skill_icon.png);
     background-repeat: no-repeat;
