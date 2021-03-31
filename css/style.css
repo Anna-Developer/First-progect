@@ -124,8 +124,7 @@ nav {
 }
 
 .menu-adeptive {
-    position: absolute;
-    opacity: 0;
+    display: none;
 }
 
 .menu {
@@ -851,6 +850,42 @@ h2.big.text {
     background-attachment: fixed;
 }
 
+@media screen and (max-width: 1360px) {
+    .carousel-control-next {
+        right: -60px;
+    }
+}
+
+@media screen and (max-width: 1155px) {
+    .card-carousel {
+        width: 90%;
+    }
+    .card-carousel .row {
+        flex-wrap: nowrap;
+    }
+    .carousel-control-prev {
+        left: -40px;
+        width: 40px;
+    }
+    .carousel-control-next {
+        right: -20px;
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 1035px) {
+    .card-carousel {
+        width: 20rem;
+    }
+    .card-carousel .row {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .carousel-control-next {
+        right: -10px;
+    }
+}
+
 @media screen and (max-width: 1020px) {
     .menu>li {
         padding: 15px 0px;
@@ -879,6 +914,25 @@ h2.big.text {
     .logo {
         margin-left: 10px;
     }
+    /* .header{
+        margin-bottom: 200px;
+    } */
+    .header-content {
+        padding-top: 15px;
+    }
+    .menu-adeptive {
+        display: block;
+        font-size: 35px;
+        position: relative;
+    }
+    .menu {
+        position: absolute;
+        left: -33px;
+        top: 27px;
+    }
+    .menu-none {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 790px) {
@@ -903,7 +957,7 @@ h2.big.text {
 
 @media screen and (max-width: 520px) {
     .form-pall {
-        width: 90%;
+        width: 100%;
     }
     .grid-form {
         margin: 0;
@@ -956,6 +1010,22 @@ h2.big.text {
         position: absolute;
         left: -33px;
         top: 27px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .card-carousel {
+        width: 300px;
+    }
+    .card-carousel .row {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .carousel-control-next {
+        right: 30px;
+    }
+    .carousel-control-prev {
+        left: 0px;
     }
 }
 
