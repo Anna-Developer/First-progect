@@ -335,16 +335,18 @@ h2.big.text {
 }
 
 .flexbox {
-    min-height: 500px;
+    min-height: 570px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
+    background-image: radial-gradient(200% 90%, white, #5e86fd);
 }
 
 .flexbox>div {
     flex-basis: 250px;
+    margin-top: 50px;
 }
 
 .flex-1, .flex-2 {
@@ -363,10 +365,11 @@ h2.big.text {
     background-size: 25px;
     background-position: 90% 10px;
     border-radius: 5px;
+    box-shadow: 0 0 20px 5px rgb(99, 98, 98);
 }
 
 .flex-3>p {
-    border-top: 3px solid black;
+    border-top: 3px solid #7c92e4;
     padding-top: 15px;
 }
 
@@ -385,7 +388,7 @@ h2.big.text {
 
 .grid-container {
     width: 80%;
-    margin: 50px auto;
+    margin: 100px auto;
     display: grid;
     grid-template-areas: 'a a b' 'c d e';
     grid-template-rows: repeat(2, auto);
@@ -414,7 +417,7 @@ h2.big.text {
 }
 
 .grid-container>div {
-    background: chartreuse;
+    background: #c5d1fc;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 8px 8px 7px -1px grey;
@@ -448,6 +451,10 @@ h2.big.text {
     border: 1px solid green ;
     background: yellowgreen;
 }  */
+
+.carousel-section {
+    border: 1px solid #D8E3FE;
+}
 
 .card-carousel {
     width: 80%;
@@ -485,13 +492,18 @@ h2.big.text {
 
 } */
 
+.form {
+    background: linear-gradient(0deg, #eaeefc 12.77%, #355dee3d 73.11%);
+    padding-top: 100px;
+}
+
 .form-pall {
     text-align: left;
     width: 500px;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 2px;
-    background: radial-gradient(90% 90%, rgb(255, 255, 255), rgb(189, 189, 189));
+    border-radius: 5px;
+    background: #a6b8fc;
 }
 
 .form-pall>h2 {
@@ -566,7 +578,7 @@ h2.big.text {
 .anim-message {
     position: relative;
     width: 280px;
-    min-height: 300px;
+    height: 180px;
     margin: 50px auto;
     text-align: center;
 }
@@ -641,6 +653,7 @@ h2.big.text {
 }
 
 .features-wrap {
+    margin-top: -50px;
     width: 100%;
     height: 890px;
     background-color: #FFFFFF;
@@ -871,6 +884,7 @@ h2.big.text {
 
 .faq {
     min-height: 964px;
+    background-color: whitesmoke;
 }
 
 .wrap {
@@ -1102,7 +1116,7 @@ h2.big.text {
 
 @media screen and (max-width: 520px) {
     .form-pall {
-        width: 100%;
+        width: 90%;
     }
     .grid-form {
         margin: 0;
