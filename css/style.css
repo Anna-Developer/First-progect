@@ -68,6 +68,17 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    background-color: rgb(113, 113, 236);
+    width: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(87, 87, 228);
+    border-radius: 10px;
+}
+
 body {
     margin: 0;
     font-family: 'Quicksand';
@@ -850,6 +861,106 @@ h2.big.text {
     background-attachment: fixed;
 }
 
+.faq {
+    min-height: 964px;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq__content {
+    width: 743px;
+    height: 614px;
+}
+
+.faq__text {
+    text-align: center;
+}
+
+.faq__text>h5, h3 {
+    color: #3D4F9F;
+}
+
+.faq__info {
+    margin-top: 68px;
+}
+
+.faq__info>li {
+    color: #8E96B7;
+    font-size: 15px;
+    border-bottom: 1px solid #D8E3FE;
+    padding-top: 20px;
+}
+
+.faq__span {
+    margin-left: 45px;
+    cursor: pointer;
+}
+
+.faq__span p {
+    position: relative;
+}
+
+.faq__span p::before {
+    position: absolute;
+    content: url(../images/Vector-down.png);
+    left: -30px;
+}
+
+.faq__button {
+    width: 195px;
+    height: 43px;
+    background: #E8ECF4;
+    border-radius: 2px;
+    color: #7382A3;
+    border: none;
+}
+
+.faq__hidden {
+    display: none;
+    animation: faq__hidden 0.2s 1;
+}
+
+.faq__hidden li {
+    margin-top: -10px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 62px;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.faq__hidden p {
+    width: 391px;
+}
+
+.faq__span:hover {
+    color: #495274;
+    font-weight: bold;
+}
+
+.faq__span p:hover:before {
+    content: url(../images/Vector-up.png);
+}
+
+.faq__span:hover~.faq__hidden {
+    display: block;
+}
+
+@keyframes faq__hidden {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
 @media screen and (max-width: 1360px) {
     .carousel-control-next {
         right: -60px;
@@ -953,6 +1064,7 @@ h2.big.text {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, auto);
     }
+    
 }
 
 @media screen and (max-width: 520px) {
