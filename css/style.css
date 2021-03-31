@@ -1064,7 +1064,32 @@ h2.big.text {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, auto);
     }
-    
+    .faq__span {
+        margin-left: 0;
+    }
+    .faq__content {
+        width: 550px;
+    }
+    .faq__hidden li {
+        margin-left: -30px;
+    }
+    .faq__hidden p {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .faq__content {
+        width: 90%;
+    }
+    .faq__hidden li {
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 1fr;
+        padding-bottom: 10px;
+    }
+    .faq__hidden p {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 520px) {
