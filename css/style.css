@@ -86,6 +86,32 @@ body {
     font-weight: 400;
 }
 
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.m-b-200 {
+    margin-bottom: 200px;
+}
+
+@keyframes block-transition {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes small-jump {
+    0% {
+        transform: scale(0.1);
+    }
+}
+
 ul, ol, li {
     list-style: none;
 }
@@ -97,7 +123,6 @@ a {
 /* дочирний селектор */
 
 .header {
-    min-height: 80px;
     border-bottom: 1px solid #D8E3FE;
 }
 
@@ -107,6 +132,7 @@ a {
 }
 
 .header-content, .header-content__left, .header-content__right {
+    min-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,7 +157,8 @@ a {
 }
 
 nav {
-    position: relative
+    height: 40px;
+    position: relative;
 }
 
 .menu-adeptive {
@@ -140,13 +167,12 @@ nav {
 
 .menu {
     position: relative;
+    z-index: 1000000;
 }
 
 .menu>li {
     display: inline-block;
     position: relative;
-    top: 10px;
-    padding: 15px;
 }
 
 .menu>li>ul {
@@ -184,20 +210,77 @@ nav {
     margin-right: 20px;
 }
 
-.header-content__botton {
+.header-content__button {
     width: 113px;
     height: 43px;
     background: #D2E1FF;
+    border: none;
     border-radius: 2px;
     color: #3A79FF;
-    padding-top: 9px;
-    padding-left: 20px;
+}
+
+.modal-logIn {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(145, 144, 144, 0.699);
+    z-index: 100000000000000000000;
+    animation: block-transition 0.5s 1;
+}
+
+.form-logIn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 320px;
+    height: 200px;
+    background: whitesmoke;
+    border-radius: 5px;
+    border: 2px solid #87acfa;
+    animation: small-jump 0.5s 1;
+}
+
+.form-logIn input {
+    margin-bottom: 10px;
+    border: 1px solid #D2E1FF;
+    height: 30px;
+}
+
+.form-logIn input::placeholder {
+    padding-left: 10px;
+}
+
+.form-logIn button {
+    width: 113px;
+    height: 43px;
+    background: #D2E1FF;
+    border: none;
+    border-radius: 2px;
+    color: #3A79FF;
+}
+
+.form__close-button {
+    position: absolute;
+    color: #87acfa;
+    font-size: 25px;
+    cursor: pointer;
+    top: 0;
+    right: 15px;
+}
+
+.form-close {
+    display: none;
 }
 
 /* flex-start */
 
 .blog {
-    margin-top: -50px;
+    /* margin-top: -50px;
+    padding-top: 100px; */
     display: flex;
     flex-flow: row nowrap;
     background-color: whitesmoke;
@@ -205,7 +288,7 @@ nav {
 
 aside, article {
     flex-basis: 300px;
-    margin-top: 50px;
+    /* margin-top: 80px; */
 }
 
 aside {
@@ -229,19 +312,25 @@ aside {
     margin-bottom: 50px;
 }
 
-.contact {
-    /*position: relative;*/
-    /*position: fixed;*/
+.interactive {
     position: sticky;
     top: 10px;
-    left: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+    z-index: 1;
+}
+
+.contact {
+    position: relative;
+    /* position: fixed; */
     width: 50px;
     height: 50px;
     background-image: url("../images/telegramm.png");
     background-size: 90px auto;
     background-position: center;
     border-radius: 100%;
-    z-index: 100;
 }
 
 .contact a {
@@ -257,6 +346,17 @@ aside {
     left: 10px;
     border: 15px solid transparent;
     border-top: 15px solid #3c94ca;
+}
+
+.calculator__button {
+    width: 200px;
+    height: 50px;
+    background: #4D6CE1;
+    border: 2px solid #435fc4;
+    border-radius: 3px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* родственный селектор */
@@ -912,11 +1012,11 @@ h2.big.text {
     cursor: pointer;
 }
 
-.faq__span p {
+.faq__span {
     position: relative;
 }
 
-.faq__span p::before {
+.faq__span::before {
     position: absolute;
     content: url(../images/Vector-down.png);
     left: -30px;
@@ -958,11 +1058,11 @@ h2.big.text {
     font-weight: bold;
 }
 
-.faq__span p:hover:before {
+.faq__span:hover:before {
     content: url(../images/Vector-up.png);
 }
 
-.faq__span:hover~.faq__hidden {
+.faq__list:hover>.faq__hidden {
     display: block;
 }
 
@@ -1010,9 +1110,6 @@ h2.big.text {
 }
 
 @media screen and (max-width: 1020px) {
-    .menu>li {
-        padding: 15px 0px;
-    }
     .social-media>a {
         margin-right: 7px;
     }
@@ -1033,6 +1130,7 @@ h2.big.text {
 @media screen and (max-width: 840px) {
     .menu>li {
         display: block;
+        margin-bottom: 10px;
     }
     .menu>li:hover>ul {
         display: none;
@@ -1056,8 +1154,8 @@ h2.big.text {
     }
     .menu {
         position: absolute;
-        left: -33px;
-        top: 27px;
+        left: -30px;
+        top: 70px;
     }
     .menu-none {
         display: none;
@@ -1163,7 +1261,7 @@ h2.big.text {
     }
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     .header-content {
         padding-top: 15px;
     }
@@ -1174,10 +1272,9 @@ h2.big.text {
     }
     .menu {
         position: absolute;
-        left: -33px;
-        top: 27px;
+        left: -30px;
     }
-}
+} */
 
 @media screen and (max-width: 430px) {
     .card-carousel {
